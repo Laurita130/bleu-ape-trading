@@ -1,0 +1,63 @@
+.add-resource-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.add-resource-form__input {
+  flex: 1 1 160px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.add-resource-form__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+.add-resource-form__input_wide {
+  flex: 2 1 220px;
+}
+
+.add-resource-form__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-resource-form__submit {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #04060b;
+  font-weight: 700;
+  box-shadow: var(--glow-accent);
+}
+
+.add-resource-form__submit:hover {
+  filter: brightness(1.1);
+}
+
+.add-resource-form__cancel {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.add-resource-form__cancel:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}

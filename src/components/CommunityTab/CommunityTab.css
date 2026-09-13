@@ -1,0 +1,129 @@
+.community {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.community__section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.community__heading {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.community__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.community__section-header .community__heading {
+  margin-bottom: 0;
+}
+
+.community__add-toggle {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.community__add-toggle:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.community__search {
+  margin-bottom: 16px;
+}
+
+.community__search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+}
+
+.community__search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.community__empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.community__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.community__card {
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.community__name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.community__mutual {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.community__add-btn,
+.community__remove-btn {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 12px;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  transition: background 0.15s;
+}
+
+.community__add-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.community__remove-btn {
+  color: var(--loss);
+}
+
+.community__remove-btn:hover {
+  background: rgba(255, 59, 107, 0.1);
+}

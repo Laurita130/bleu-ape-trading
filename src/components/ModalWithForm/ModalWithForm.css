@@ -1,0 +1,127 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 4, 10, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal__container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface-solid);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 32px 24px 24px;
+  box-shadow: var(--glow-accent);
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--text-muted);
+}
+
+.modal__close:hover {
+  color: var(--accent);
+}
+
+.modal__title {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.modal__input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-family: var(--font-body);
+  text-transform: none;
+}
+
+.modal__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+.modal__submit {
+  margin-top: 8px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #04060b;
+  font-weight: 700;
+  box-shadow: var(--glow-accent);
+}
+
+.modal__submit:hover {
+  filter: brightness(1.1);
+}
+
+.modal__switch {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.82rem;
+  padding: 0;
+  text-align: left;
+}
+
+.modal__error {
+  margin: -4px 0 0;
+  color: var(--loss);
+  font-size: 0.82rem;
+}
+
+.modal__success {
+  margin: -4px 0 0;
+  color: var(--profit);
+  font-size: 0.82rem;
+}
+
+.modal__hint {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
