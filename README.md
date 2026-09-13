@@ -54,5 +54,8 @@ This is a frontend-only app for Stage 1 — there's no server or database yet. A
 https://trello.com/invite/b/6a8e30132e2ae4c8673f9cb1/ATTI92e4b9e9ce48d74d652a34ceacfcef5dA54E77FB/bleu-ape-trading-app
 
 ## Project Pitch Video
+https://www.loom.com/share/35b474b08e894131bf98c9e0c1e7bdf5
 
 
+## Deployed Project
+https://laurita130.github.io/bleu-ape-trading/
