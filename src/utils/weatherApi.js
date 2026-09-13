@@ -1,10 +1,7 @@
-// Open-Meteo is free and requires no API key/signup — a good fit alongside
-// the browser's own geolocation so "today's weather" means wherever the
-// person actually is. Docs: https://open-meteo.com/en/docs
+
 const BASE_URL = 'https://api.open-meteo.com/v1/forecast'
 
-// WMO weather codes -> a short label + emoji. Not every code, just the
-// common ones; anything else falls back to a generic label below.
+
 const WEATHER_CODES = {
   0: { label: 'Clear sky', icon: '☀️' },
   1: { label: 'Mostly clear', icon: '🌤️' },
@@ -33,9 +30,6 @@ function describeWeatherCode(code) {
   return WEATHER_CODES[code] || { label: 'Weather', icon: '🌡️' }
 }
 
-// Falls back here if the browser won't share (or doesn't have) a location —
-// West Palm Beach, FL — so the weather always shows something instead of
-// erroring out.
 const FALLBACK_LOCATION = { latitude: 26.7153, longitude: -80.0534, label: 'West Palm Beach, FL' }
 
 function getCurrentPosition() {
@@ -52,10 +46,7 @@ function getCurrentPosition() {
   })
 }
 
-// Returns both the current conditions and today's expected high/low so the
-// banner can show "what it's doing right now" and "what to expect today".
-// Tries the browser's real location first; if that's denied/unavailable it
-// quietly falls back to West Palm Beach, FL instead of showing an error.
+
 export async function getLocalWeather() {
   const position = await getCurrentPosition()
   const usedFallback = !position

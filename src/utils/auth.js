@@ -34,8 +34,7 @@ export function getCurrentUser() {
   return raw ? JSON.parse(raw) : null
 }
 
-// Public directory of every registered account (name + email only — never
-// passwords or recovery emails) for The Nest's community features.
+
 export function getAllUsers() {
   return getUsers().map((user) => toPublicUser(user))
 }

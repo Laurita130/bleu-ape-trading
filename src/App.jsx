@@ -25,7 +25,7 @@ import { hasUnseenAnnouncements } from './utils/announcements.js'
 import './App.css'
 
 function App() {
-  // 'login' | 'register' | 'forgot' | null — only one modal open at a time
+
   const [activeModal, setActiveModal] = useState(null)
   const [authError, setAuthError] = useState(null)
   const [authMessage, setAuthMessage] = useState(null)
@@ -46,7 +46,7 @@ function App() {
     setActiveModal(modal)
   }
 
-  // Close whichever modal is open when the user presses Escape
+  
   useEffect(() => {
     function handleEscape(evt) {
       if (evt.key === 'Escape') closeModal()
@@ -55,9 +55,7 @@ function App() {
     return () => document.removeEventListener('keydown', handleEscape)
   }, [closeModal])
 
-  // "Time On App" should only tick while the user is actually logged in —
-  // start the clock on login, bank the elapsed time on logout (or if the
-  // tab closes while still logged in).
+  
   useEffect(() => {
     if (!currentUser) return undefined
 
@@ -74,7 +72,6 @@ function App() {
     }
   }, [currentUser])
 
-  // Keeps the header bell in sync with new messages and announcements.
   useEffect(() => {
     if (!currentUser) {
       setHasUnreadMessages(false)
@@ -100,9 +97,6 @@ function App() {
     setTrades(deleteTrade(id))
   }
 
-  // The calendar's own P&L field feeds straight into the same trades list
-  // the Journal reads from — an empty value clears that day's entry instead
-  // of leaving a stray $0 trade behind.
   function handleSaveCalendarEntry(date, pnl, notes) {
     if (pnl === '' || pnl === null || pnl === undefined || Number.isNaN(Number(pnl))) {
       setTrades(removeCalendarTrade(date))

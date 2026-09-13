@@ -1,6 +1,4 @@
-// Tracks which announcements each account has already seen, so the header
-// bell can flag brand-new ones — this lives alongside the announcement
-// list itself since "unseen" only makes sense relative to it.
+
 const SEEN_KEY = 'apex_trading_seen_announcements'
 
 function getSeenMap() {
@@ -27,16 +25,13 @@ export function markAnnouncementsSeen(email) {
   saveSeenMap(map)
 }
 
-// Drives the header bell's yellow "new announcement" state — true the
-// moment any announcement in the list hasn't been viewed on the
-// Announcements tab yet.
 export function hasUnseenAnnouncements(email) {
   if (!email) return false
   const seenIds = getSeenMap()[email] || []
   return ANNOUNCEMENTS.some((announcement) => !seenIds.includes(announcement.id))
 }
 
-// Announcement feed content — links back into the Courses page.
+
 export const ANNOUNCEMENTS = [
   {
     id: 'community-launch',

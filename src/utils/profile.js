@@ -1,5 +1,4 @@
-// Profile pictures, stored as data URLs in localStorage, keyed by account
-// email.
+
 const PROFILE_PICTURES_KEY = 'apex_trading_profile_pictures'
 
 function getPictureMap() {
@@ -23,6 +22,5 @@ export function setProfilePicture(email, dataUrl) {
     map[email] = dataUrl
     localStorage.setItem(PROFILE_PICTURES_KEY, JSON.stringify(map))
   } catch {
-    // ignore write failures (e.g. storage full/disabled)
   }
 }

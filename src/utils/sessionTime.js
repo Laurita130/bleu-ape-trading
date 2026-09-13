@@ -1,8 +1,4 @@
-// Tracks total time the user has spent logged into the app. Unlike a plain
-// wall-clock diff, this uses an accumulator: time only counts up while a
-// "segment" is open (started on login, closed on logout), so the clock
-// pauses the moment the user logs out instead of continuing to run in the
-// background.
+
 const ACTIVE_MS_KEY = 'apex_trading_active_ms'
 const SEGMENT_START_KEY = 'apex_trading_active_segment_start'
 
@@ -25,20 +21,17 @@ function readSegmentStart() {
   }
 }
 
-// Call when the user logs in. Safe to call more than once — if a segment is
-// already open (e.g. a stray call on remount) it won't reset the clock.
+
 export function startActiveSegment() {
   try {
     if (!localStorage.getItem(SEGMENT_START_KEY)) {
       localStorage.setItem(SEGMENT_START_KEY, String(Date.now()))
     }
   } catch {
-    // localStorage can throw in private-browsing mode — fail soft
+ 
   }
 }
 
-// Call when the user logs out (or the tab is closing). Folds the open
-// segment's elapsed time into the running total and closes the segment.
 export function stopActiveSegment() {
   try {
     const segmentStart = readSegmentStart()
@@ -48,12 +41,11 @@ export function stopActiveSegment() {
       localStorage.removeItem(SEGMENT_START_KEY)
     }
   } catch {
-    // localStorage can throw in private-browsing mode — fail soft
+   
   }
 }
 
-// Total active time so far: the banked total, plus whatever has elapsed in
-// the currently-open segment (if the user is logged in right now).
+
 export function getActiveMs() {
   const segmentStart = readSegmentStart()
   const stored = readStoredMs()

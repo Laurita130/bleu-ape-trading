@@ -1,4 +1,4 @@
-// Private messaging between accounts.
+
 const MESSAGES_KEY = 'apex_trading_messages'
 
 function getAllMessages() {
@@ -14,7 +14,7 @@ function saveMessages(messages) {
   try {
     localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages))
   } catch {
-    // ignore write failures (e.g. storage disabled)
+
   }
 }
 
@@ -28,8 +28,7 @@ export function getConversation(a, b) {
     .sort((m1, m2) => m1.timestamp - m2.timestamp)
 }
 
-// One row per person you've messaged (or who's messaged you), most recent
-// first, with how many of their messages you haven't read yet.
+
 export function getConversationsFor(email) {
   const messages = getAllMessages().filter((message) => message.from === email || message.to === email)
   const partners = new Map()
@@ -81,8 +80,7 @@ export function markConversationRead(email, partnerEmail) {
   if (changed) saveMessages(updated)
 }
 
-// Drives the notification bell in the header — true the moment any message
-// addressed to this user hasn't been read yet.
+
 export function hasUnread(email) {
   return getAllMessages().some((message) => message.to === email && !message.read)
 }

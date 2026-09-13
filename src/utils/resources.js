@@ -1,7 +1,6 @@
 const STORAGE_KEY = 'apex_trading_resources'
 
-// Starter entries so the page isn't empty on a fresh install — replace or
-// remove these once you've added your own.
+
 const DEFAULT_RESOURCES = [
   {
     id: 'r1',
@@ -23,7 +22,7 @@ function persist(resources) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(resources))
   } catch {
-    // ignore write failures (e.g. storage disabled)
+   
   }
   return resources
 }

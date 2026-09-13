@@ -1,9 +1,8 @@
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
 
-// Jesse Rogers | Casper Trading — https://www.youtube.com/@officialjesserogers
+
 const CHANNEL_ID = 'UCEAq-8Ih0WI6R7wYoCFiWmA'
-// Every channel's "uploads" playlist ID is just its channel ID with UC -> UU.
-// Reading that playlist costs 1 quota unit vs. 100 for a search call.
+
 const UPLOADS_PLAYLIST_ID = CHANNEL_ID.replace(/^UC/, 'UU')
 
 // Docs: https://developers.google.com/youtube/v3/docs/playlistItems/list

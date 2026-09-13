@@ -39,12 +39,6 @@ export function deleteTrade(id) {
   return persist(trades);
 }
 
-// The trading calendar lets someone log a day's P&L directly on that date
-// instead of using the trade form this keeps that single entry in sync
-// with the Journal automatically instead of asking for it twice. Each
-// calendarlogged day gets at most one trade, tagged source: "calendar", so
-// re-opening that day and saving again updates the same entry instead of
-// creating a duplicate.
 export function upsertCalendarTrade(date, pnl, notes) {
   const trades = getTrades();
   const index = trades.findIndex(

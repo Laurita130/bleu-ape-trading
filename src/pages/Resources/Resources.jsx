@@ -37,8 +37,7 @@ function Resources() {
           <ResourceLink
             key={resource.id}
             resource={resource}
-            // The two starter resources (no dateAdded) aren't removable —
-            // only ones a user actually added through the form are.
+            
             onDelete={resource.dateAdded ? () => handleDelete(resource.id) : null}
           />
         ))}

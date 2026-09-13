@@ -1,6 +1,6 @@
 const STORAGE_KEY = 'apex_trading_calendar_notes'
 
-// Notes are stored as { "2026-09-12": "note text", ... } keyed by day.
+
 
 export function getNotes() {
   try {
@@ -21,7 +21,7 @@ export function setNote(dateKey, text) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(notes))
   } catch {
-    // ignore write failures (e.g. storage disabled)
+  
   }
   return notes
 }
