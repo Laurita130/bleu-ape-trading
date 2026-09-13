@@ -14,7 +14,7 @@ function persist(trades) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(trades));
   } catch {
-    // ignore write failures (e.g. storage disabled)
+    
   }
   return trades;
 }
@@ -40,9 +40,9 @@ export function deleteTrade(id) {
 }
 
 // The trading calendar lets someone log a day's P&L directly on that date
-// instead of using the trade form — this keeps that single entry in sync
+// instead of using the trade form this keeps that single entry in sync
 // with the Journal automatically instead of asking for it twice. Each
-// calendar-logged day gets at most one trade, tagged source: "calendar", so
+// calendarlogged day gets at most one trade, tagged source: "calendar", so
 // re-opening that day and saving again updates the same entry instead of
 // creating a duplicate.
 export function upsertCalendarTrade(date, pnl, notes) {
