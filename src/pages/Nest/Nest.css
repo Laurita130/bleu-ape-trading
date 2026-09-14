@@ -1,0 +1,44 @@
+.nest {
+  position: relative;
+}
+
+.nest__content {
+  position: relative;
+  z-index: 1;
+}
+
+.nest__title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.nest__tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.nest__tab {
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.nest__tab:hover {
+  color: var(--text);
+}
+
+.nest__tab_active {
+  border-color: var(--border-strong);
+  color: var(--accent);
+  box-shadow: var(--glow-accent);
+}

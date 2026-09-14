@@ -1,0 +1,66 @@
+.journal-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.journal-stats__tile {
+  padding: 14px 16px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.journal-stats__label {
+  margin: 0 0 4px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.journal-stats__value {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.journal-stats__value_positive {
+  color: var(--profit);
+}
+
+.journal-stats__value_negative {
+  color: var(--loss);
+}
+
+.journal-stats__tile_wide {
+  grid-column: 1 / -1;
+}
+
+.journal-stats__empty-text {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.journal-stats__quote {
+  margin: 4px 0 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: normal;
+}
+
+@media (max-width: 480px) {
+  .journal-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

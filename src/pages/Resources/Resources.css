@@ -1,0 +1,32 @@
+.resources__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resources__title {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.resources__add-btn {
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #04060b;
+  font-weight: 700;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  box-shadow: var(--glow-accent);
+}
+
+.resources__add-btn:hover {
+  filter: brightness(1.1);
+}
+
+.resources__list {
+  display: grid;
+  gap: 12px;
+}

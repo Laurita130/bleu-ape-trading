@@ -1,0 +1,41 @@
+.courses__title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.courses__card {
+  padding: 32px 24px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--glow-accent);
+  text-align: center;
+}
+
+.courses__eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.courses__headline {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .courses__card {
+    padding: 24px 18px;
+  }
+
+  .courses__headline {
+    font-size: 1.02rem;
+  }
+}

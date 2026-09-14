@@ -1,0 +1,171 @@
+.monthly-goal {
+  background: rgba(10, 12, 20, 0.6);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.monthly-goal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.monthly-goal__label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b8c5d6;
+  margin: 0;
+}
+
+.monthly-goal__edit {
+  background: transparent;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00e5ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.monthly-goal__edit:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.monthly-goal__form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.monthly-goal__input {
+  flex: 1;
+  min-width: 140px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.monthly-goal__input:focus {
+  outline: none;
+  border-color: rgba(0, 229, 255, 0.6);
+}
+
+.monthly-goal__submit {
+  background: linear-gradient(135deg, #00e5ff, #7b2ff7);
+  border: none;
+  border-radius: 6px;
+  padding: 9px 20px;
+  color: #05060a;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.monthly-goal__cancel {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 9px 16px;
+  color: #b8c5d6;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.monthly-goal__cancel:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.monthly-goal__track {
+  position: relative;
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #ff3b3b 0%, #ffb020 50%, #2ee66b 100%);
+  margin: 18px 0 14px;
+}
+
+.monthly-goal__zero-line {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.monthly-goal__marker {
+  position: absolute;
+  top: -6px;
+  width: 5px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 18px rgba(0, 229, 255, 0.7);
+  transform: translateX(-50%);
+  transition: left 0.4s ease;
+}
+
+.monthly-goal__figures {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.monthly-goal__pnl {
+  font-weight: 600;
+}
+
+.monthly-goal__pnl_positive {
+  color: #2ee66b;
+}
+
+.monthly-goal__pnl_negative {
+  color: #ff5c5c;
+}
+
+.monthly-goal__goal-text {
+  color: #9fb0c3;
+}
+
+.monthly-goal__reached {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0 0;
+  text-align: center;
+  color: #2ee66b;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 600px) {
+  .monthly-goal__form {
+    flex-direction: column;
+  }
+
+  .monthly-goal__submit {
+    width: 100%;
+  }
+}

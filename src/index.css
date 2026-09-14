@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./fonts/Orbitron-Regular.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --surface: rgba(18, 24, 38, 0.62);
+  --surface-solid: #0f1420;
+  --border: rgba(0, 229, 255, 0.18);
+  --border-strong: rgba(0, 229, 255, 0.45);
+  --text: #e8f1ff;
+  --text-muted: #7c8aa5;
+  --accent: #00e5ff;
+  --accent-2: #b24bf3;
+  --profit: #39ff88;
+  --loss: #ff3b6b;
+  --warn: #ffb84d;
+  --radius: 12px;
+  --glow-accent: 0 0 16px rgba(0, 229, 255, 0.35), 0 0 40px rgba(0, 229, 255, 0.1);
+  --glow-accent-2: 0 0 16px rgba(178, 75, 243, 0.35);
+  --font-display: 'Orbitron', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at 15% -10%, rgba(0, 229, 255, 0.14), transparent 42%),
+    radial-gradient(circle at 88% 8%, rgba(178, 75, 243, 0.12), transparent 46%),
+    linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    42px 42px,
+    42px 42px;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+}
