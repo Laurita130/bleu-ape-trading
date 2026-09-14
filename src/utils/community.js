@@ -14,7 +14,7 @@ function saveFriendMap(map) {
   try {
     localStorage.setItem(FRIENDS_KEY, JSON.stringify(map))
   } catch {
-  
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 

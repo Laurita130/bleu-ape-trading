@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getLocalWeather } from '../../utils/weatherApi.js'
+import { FireIcon, WeatherIcon } from '../Icons/Icons.jsx'
 import './StreakBanner.css'
 
 function StreakBanner({ streak, currentUser }) {
@@ -46,16 +47,22 @@ function StreakBanner({ streak, currentUser }) {
         {weather && (
           <p className="streak-banner__weather">
             {weather.locationLabel && <span className="streak-banner__location">{weather.locationLabel}: </span>}
-            {weather.icon} {weather.temperatureF}°F right now, {weather.label.toLowerCase()} · Today: expect{' '}
+            <WeatherIcon name={weather.icon} className="streak-banner__weather-icon" /> {weather.temperatureF}°F
+            right now, {weather.label.toLowerCase()} · Today: expect{' '}
             {weather.dailyLabel.toLowerCase()}, H:{weather.highF}° L:{weather.lowF}°
           </p>
         )}
         {weatherError && <p className="streak-banner__weather-error">{weatherError}</p>}
       </div>
       <p className="streak-banner__text">
-        {hasStreak
-          ? `🔥 ${streak}-day trading streak — log one today to keep it going.`
-          : "You haven't logged a trade recently. Log one today to start a new streak."}
+        {hasStreak ? (
+          <>
+            <FireIcon className="streak-banner__fire-icon" /> {streak}-day trading streak — log one today to keep it
+            going.
+          </>
+        ) : (
+          "You haven't logged a trade recently. Log one today to start a new streak."
+        )}
       </p>
     </section>
   )

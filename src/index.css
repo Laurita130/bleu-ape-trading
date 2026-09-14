@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./fonts/Orbitron-Regular.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #000000;
   --surface: rgba(18, 24, 38, 0.62);

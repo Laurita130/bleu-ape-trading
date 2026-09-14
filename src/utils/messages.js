@@ -14,7 +14,7 @@ function saveMessages(messages) {
   try {
     localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages))
   } catch {
-
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 

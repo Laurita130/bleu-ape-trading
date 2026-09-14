@@ -16,7 +16,7 @@ export function setMonthlyGoal(value) {
   try {
     localStorage.setItem(GOAL_KEY, String(value))
   } catch {
-
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 
@@ -24,7 +24,7 @@ export function clearMonthlyGoal() {
   try {
     localStorage.removeItem(GOAL_KEY)
   } catch {
-    
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 

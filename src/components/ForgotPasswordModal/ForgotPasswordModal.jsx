@@ -37,6 +37,7 @@ function ForgotPasswordModal({ isOpen, onClose, onSwitchToLogin, onResetPassword
           id="forgot-email"
           className="modal__input"
           type="email"
+          placeholder="you@example.com"
           value={email}
           onChange={(evt) => setEmail(evt.target.value)}
           required
@@ -48,6 +49,7 @@ function ForgotPasswordModal({ isOpen, onClose, onSwitchToLogin, onResetPassword
           id="forgot-recovery-email"
           className="modal__input"
           type="email"
+          placeholder="backup@example.com"
           value={recoveryEmail}
           onChange={(evt) => setRecoveryEmail(evt.target.value)}
           required
@@ -60,6 +62,7 @@ function ForgotPasswordModal({ isOpen, onClose, onSwitchToLogin, onResetPassword
           id="forgot-new-password"
           className="modal__input"
           type="password"
+          placeholder="Create a new password"
           value={newPassword}
           onChange={(evt) => setNewPassword(evt.target.value)}
           required

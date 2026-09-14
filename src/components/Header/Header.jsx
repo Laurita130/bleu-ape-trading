@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation.jsx'
 import logoIcon from '../../assets/apex-trading-icon.png'
 import { getProfilePicture, setProfilePicture } from '../../utils/profile.js'
+import { BellIcon } from '../Icons/Icons.jsx'
 import './Header.css'
 
 function getInitial(name) {
@@ -54,7 +55,7 @@ function Header({
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        <img className="header__logo-img" src={logoIcon} alt="" />
+        <img className="header__logo-img" src={logoIcon} alt="Bleu Ape Trading logo" />
         <span className="header__logo-text">Bleu Ape Trading</span>
       </Link>
       {currentUser && <Navigation />}
@@ -78,7 +79,7 @@ function Header({
               : 'Notifications'
           }
         >
-          🔔
+          <BellIcon />
         </Link>
       )}
       <div className="header__auth">

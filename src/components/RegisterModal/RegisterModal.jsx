@@ -36,6 +36,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister, error }) 
           id="register-name"
           className="modal__input"
           type="text"
+          placeholder="Your full name"
           value={name}
           onChange={(evt) => setName(evt.target.value)}
           required
@@ -47,6 +48,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister, error }) 
           id="register-email"
           className="modal__input"
           type="email"
+          placeholder="you@example.com"
           value={email}
           onChange={(evt) => setEmail(evt.target.value)}
           required
@@ -58,6 +60,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister, error }) 
           id="register-password"
           className="modal__input"
           type="password"
+          placeholder="Create a password"
           value={password}
           onChange={(evt) => setPassword(evt.target.value)}
           required
@@ -72,6 +75,7 @@ function RegisterModal({ isOpen, onClose, onSwitchToLogin, onRegister, error }) 
           id="register-recovery-email"
           className="modal__input"
           type="email"
+          placeholder="backup@example.com"
           value={recoveryEmail}
           onChange={(evt) => setRecoveryEmail(evt.target.value)}
         />

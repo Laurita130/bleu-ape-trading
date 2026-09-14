@@ -22,7 +22,7 @@ function persist(resources) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(resources))
   } catch {
-   
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
   return resources
 }

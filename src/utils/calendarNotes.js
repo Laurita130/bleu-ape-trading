@@ -21,7 +21,7 @@ export function setNote(dateKey, text) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(notes))
   } catch {
-  
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
   return notes
 }

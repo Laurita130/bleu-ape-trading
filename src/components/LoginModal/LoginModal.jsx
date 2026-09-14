@@ -32,6 +32,7 @@ function LoginModal({ isOpen, onClose, onSwitchToRegister, onForgotPassword, onL
           id="login-email"
           className="modal__input"
           type="email"
+          placeholder="you@example.com"
           value={email}
           onChange={(evt) => setEmail(evt.target.value)}
           required
@@ -43,6 +44,7 @@ function LoginModal({ isOpen, onClose, onSwitchToRegister, onForgotPassword, onL
           id="login-password"
           className="modal__input"
           type="password"
+          placeholder="Enter your password"
           value={password}
           onChange={(evt) => setPassword(evt.target.value)}
           required

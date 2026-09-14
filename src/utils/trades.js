@@ -14,7 +14,7 @@ function persist(trades) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(trades));
   } catch {
-    
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
   return trades;
 }

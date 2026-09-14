@@ -99,10 +99,10 @@
 }
 
 .header__bell {
-  font-size: 1.3rem;
+  display: inline-flex;
+  color: var(--text-muted);
   text-decoration: none;
-  filter: grayscale(1) brightness(1.6);
-  transition: filter 0.15s, transform 0.15s;
+  transition: color 0.15s, transform 0.15s;
   line-height: 1;
 }
 
@@ -111,16 +111,14 @@
 }
 
 .header__bell_unread {
-  filter: none;
   color: var(--loss);
-  text-shadow: 0 0 10px rgba(255, 59, 107, 0.75);
+  filter: drop-shadow(0 0 6px rgba(255, 59, 107, 0.75));
   animation: bell-pulse 1.4s ease-in-out infinite;
 }
 
 .header__bell_announcement {
-  filter: none;
   color: var(--warn);
-  text-shadow: 0 0 10px rgba(255, 184, 77, 0.8);
+  filter: drop-shadow(0 0 6px rgba(255, 184, 77, 0.8));
   animation: bell-pulse 1.4s ease-in-out infinite;
 }
 

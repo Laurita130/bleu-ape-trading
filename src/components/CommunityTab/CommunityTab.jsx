@@ -8,6 +8,9 @@ function CommunityTab({ currentUser }) {
   const [showAddFriend, setShowAddFriend] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
 
+  // refreshTick isn't read inside the callback — it's only here to force a
+  // fresh read from localStorage after a friend action.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const allUsers = useMemo(() => getAllUsers(), [refreshTick])
   const friends = getFriends(currentUser.email)
   const friendUsers = allUsers.filter((user) => friends.includes(user.email))

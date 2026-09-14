@@ -148,6 +148,10 @@
 }
 
 .monthly-goal__reached {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   margin: 12px 0 0;
   text-align: center;
   color: #2ee66b;

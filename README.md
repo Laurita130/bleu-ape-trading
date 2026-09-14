@@ -1,8 +1,8 @@
 # Bleu Ape Trading
 
-A personal trading journal and community app for traders, built as a TripleTen final project (Stage 1 — React frontend + third-party APIs).
+A personal trading journal and community app for traders, built as a TripleTen final project (Stage 1  React frontend + third-party APIs).
 
-Log trades to track profit/loss, keep an eye on your trading streak, catch a daily market-news digest and weather, plan your month with a P&L goal meter, connect with other traders, and find curated study resources and courses — all in one place.
+Log trades to track profit/loss, keep an eye on your trading streak, catch a daily market-news digest and weather, plan your month with a P&L goal meter, connect with other traders, and find curated study resources and courses all in one place.
 
 ## Features
 
@@ -17,13 +17,6 @@ Log trades to track profit/loss, keep an eye on your trading streak, catch a dai
 
 React 18 · Vite · React Router · CSS (BEM naming) · Finnhub API · Open-Meteo API · browser `localStorage` for persistence
 
-## Getting started
-
-```bash
-npm install
-cp .env.example .env   # then add your free Finnhub API key
-npm run dev
-```
 
 
 

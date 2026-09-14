@@ -22,5 +22,6 @@ export function setProfilePicture(email, dataUrl) {
     map[email] = dataUrl
     localStorage.setItem(PROFILE_PICTURES_KEY, JSON.stringify(map))
   } catch {
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }

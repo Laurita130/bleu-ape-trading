@@ -28,7 +28,7 @@ export function startActiveSegment() {
       localStorage.setItem(SEGMENT_START_KEY, String(Date.now()))
     }
   } catch {
- 
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 
@@ -41,7 +41,7 @@ export function stopActiveSegment() {
       localStorage.removeItem(SEGMENT_START_KEY)
     }
   } catch {
-   
+    // localStorage may be unavailable (private mode, quota) — fail silently
   }
 }
 

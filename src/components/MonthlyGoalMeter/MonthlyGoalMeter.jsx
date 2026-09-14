@@ -4,6 +4,7 @@ import {
   setMonthlyGoal,
   computeMonthlyPnl,
 } from '../../utils/monthlyGoal.js'
+import { TargetIcon } from '../Icons/Icons.jsx'
 import './MonthlyGoalMeter.css'
 
 function formatCurrency(value) {
@@ -94,7 +95,11 @@ function MonthlyGoalMeter({ trades }) {
             <span className="monthly-goal__goal-text">Goal: ${goal.toFixed(2)}</span>
           </div>
 
-          {reached && <p className="monthly-goal__reached">🎯 Goal reached this month!</p>}
+          {reached && (
+            <p className="monthly-goal__reached">
+              <TargetIcon /> Goal reached this month!
+            </p>
+          )}
         </>
       )}
     </div>
